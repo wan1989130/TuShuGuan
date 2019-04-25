@@ -1,0 +1,72 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - Alamofire (4.8.2)
+  - AlamofireObjectMapper (5.2.0):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
+  - ESPullToRefresh (2.7)
+  - FVSeatsPicker (0.9.0)
+  - IQKeyboardManager (6.2.1)
+  - MBProgressHUD (1.1.0)
+  - ObjectMapper (3.4.2)
+  - OLGhostAlertView (1.8.1)
+  - Reachability (3.2)
+  - SDWebImage (5.0.1):
+    - SDWebImage/Core (= 5.0.1)
+  - SDWebImage/Core (5.0.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AlamofireObjectMapper
+  - ESPullToRefresh
+  - FVSeatsPicker
+  - IQKeyboardManager
+  - MBProgressHUD
+  - OLGhostAlertView
+  - Reachability
+  - SDWebImage
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - Alamofire
+    - AlamofireObjectMapper
+    - ESPullToRefresh
+    - FVSeatsPicker
+    - IQKeyboardManager
+    - MBProgressHUD
+    - ObjectMapper
+    - OLGhostAlertView
+    - Reachability
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  AlamofireObjectMapper: 92b6ce2423a9d159e686f6a1d514a009bf903ddc
+  ESPullToRefresh: 119e2710b82b75536aab2bbe4883ba119fca35c8
+  FVSeatsPicker: 4a20b3af164584f62579e39bfc4704d8297b2276
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
+  MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  OLGhostAlertView: 3eb3179a2be9c3a764831d0f958c36bb8ea38b53
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
+
+PODFILE CHECKSUM: 93ff0225de8a53bb406c588d69fade399c3f3fa8
+
+COCOAPODS: 1.6.1

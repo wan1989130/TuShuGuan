@@ -1,0 +1,23 @@
+
+platform :ios, '8.0'
+use_frameworks!
+
+source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/aliyun/aliyun-specs.git'
+target ‘TuShuGuan’ do
+    pod 'AFNetworking'              #AFNetworking
+    pod 'AlamofireObjectMapper'     #解析
+    
+   pod 'FVSeatsPicker'
+    pod 'SDWebImage'                #SDWebImage
+    pod 'IQKeyboardManager'         #键盘
+    pod 'MBProgressHUD'             #弹出提示
+   
+    pod 'OLGhostAlertView'          #弹出提示
+    pod 'Reachability'              #网络状态监测
+        pod "ESPullToRefresh" #下啦刷新
+end
+
+
+
+
