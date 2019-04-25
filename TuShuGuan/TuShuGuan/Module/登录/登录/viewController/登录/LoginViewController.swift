@@ -66,8 +66,8 @@ class LoginViewController: BaseViewController {
         }
 //        self.showMainTab()
         let parameter:NSMutableDictionary = [
-            "username":userNameTextField.text!,
-            "password":passwordTextField.text!,
+            "loginid":userNameTextField.text!,
+            "loginpassword":passwordTextField.text!,
 
         ]
         weak var weakSelf = self

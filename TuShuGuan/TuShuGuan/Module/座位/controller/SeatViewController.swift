@@ -56,7 +56,7 @@ extension SeatViewController{
         picker.seatsDelegate = self
         picker.setImage(UIImage.init(named: "seat_available"), for: .normal)
         picker.setImage(UIImage.init(named: "seat_unavailable"), for: .disabled)
-        picker.setImage(UIImage.init(named: "seat_selected"), for: .selected)
+        picker.setImage(UIImage.init(named: "yx"), for: .selected)
         picker.frame = CGRect(x: 0, y: 100, width: ScreenWidth, height: ScreenHeight - 100 - CGFloat(navHeight) - 40)
         self.view.addSubview(picker)
         loadData()

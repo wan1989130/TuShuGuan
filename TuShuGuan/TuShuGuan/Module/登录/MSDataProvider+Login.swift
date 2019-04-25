@@ -12,7 +12,7 @@ extension MSDataProvider{
     //登陆接口
     class func login(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
         
-        LHHttpDataProvider.postDataForDelegate(delegate, path: "login.do", withParams: parameter, verson: nil, completionBlock: completionBlock)
+        LHHttpDataProvider.getDataForDelegate(delegate, path: "loginaction", withParams: parameter, verson: nil, completionBlock: completionBlock)
     }
  
     //添加注册的新用户

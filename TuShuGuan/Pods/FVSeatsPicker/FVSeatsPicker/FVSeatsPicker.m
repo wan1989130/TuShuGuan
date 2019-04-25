@@ -67,11 +67,11 @@ static const char kSeatInfo;
 
 - (void)configDefaultSeatsIcon
 {
-    NSString *source1 = [[self fv_bundle] pathForResource:@"seat_available@2x" ofType:@"png"];
+    NSString *source1 = [[self fv_bundle] pathForResource:@"mr" ofType:@"png"];
     _imageDict[@(UIControlStateNormal)] = [[UIImage imageWithContentsOfFile:source1] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     NSString *source2 = [[self fv_bundle] pathForResource:@"seat_disabled@2x" ofType:@"png"];
     _imageDict[@(UIControlStateDisabled)] = [[UIImage imageWithContentsOfFile:source2] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    NSString *source3 = [[self fv_bundle] pathForResource:@"seat_selected@2x" ofType:@"png"];
+    NSString *source3 = [[self fv_bundle] pathForResource:@"yx" ofType:@"png"];
     _imageDict[@(UIControlStateSelected)] = [[UIImage imageWithContentsOfFile:source3] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 }
 
@@ -152,12 +152,13 @@ static const char kSeatInfo;
         button.enabled = info.seatStatus == FVSeatsStateAvailable;
         
         if(info.seatStatus == FVSeatsStateSelected){
+          
             button.enabled = YES;
             button.selected = YES;
         }else if(info.seatStatus == FVSeatsStateSellOut){
             NSLog(@"aa");
             button.enabled = false;
-            NSString *source = [[self fv_bundle] pathForResource:@"yx" ofType:@"png"];
+            NSString *source = [[self fv_bundle] pathForResource:@"seat_disabled@2x" ofType:@"png"];
             
             [button setImage:[[UIImage imageWithContentsOfFile:source] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateDisabled];
         }else if(info.seatStatus == FVSeatsStateUnavailable){
