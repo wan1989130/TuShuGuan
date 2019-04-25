@@ -193,11 +193,11 @@
 		E325E80222718253008FD6DF /* PersonRegisterDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E7FF22718253008FD6DF /* PersonRegisterDataController.swift */; };
 		E325E80322718253008FD6DF /* PersonRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80022718253008FD6DF /* PersonRegisterViewController.xib */; };
 		E325E8052271925E008FD6DF /* HomeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E8042271925E008FD6DF /* HomeDataController.swift */; };
-		E325E80922719289008FD6DF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E80722719289008FD6DF /* HomeTableViewCell.swift */; };
-		E325E80A22719289008FD6DF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80822719289008FD6DF /* HomeTableViewCell.xib */; };
 		E325E80F22719439008FD6DF /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E80D22719439008FD6DF /* SeatViewController.swift */; };
 		E325E81022719439008FD6DF /* SeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80E22719439008FD6DF /* SeatViewController.xib */; };
 		E325E813227195D0008FD6DF /* SeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E812227195D0008FD6DF /* SeatModel.swift */; };
+		E3BFE1652271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */; };
+		E3BFE1662271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3BFE1642271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -477,11 +477,11 @@
 		E325E7FF22718253008FD6DF /* PersonRegisterDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRegisterDataController.swift; sourceTree = "<group>"; };
 		E325E80022718253008FD6DF /* PersonRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonRegisterViewController.xib; sourceTree = "<group>"; };
 		E325E8042271925E008FD6DF /* HomeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataController.swift; sourceTree = "<group>"; };
-		E325E80722719289008FD6DF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		E325E80822719289008FD6DF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		E325E80D22719439008FD6DF /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		E325E80E22719439008FD6DF /* SeatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatViewController.xib; sourceTree = "<group>"; };
 		E325E812227195D0008FD6DF /* SeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatModel.swift; sourceTree = "<group>"; };
+		E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewControllerCollectionViewCell.swift; sourceTree = "<group>"; };
+		E3BFE1642271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewControllerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1461,8 +1461,8 @@
 		E325E80622719275008FD6DF /* cell */ = {
 			isa = PBXGroup;
 			children = (
-				E325E80722719289008FD6DF /* HomeTableViewCell.swift */,
-				E325E80822719289008FD6DF /* HomeTableViewCell.xib */,
+				E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */,
+				E3BFE1642271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -1616,7 +1616,6 @@
 				E325E23522717257008FD6DF /* Assets.xcassets in Resources */,
 				E325E3E622717578008FD6DF /* NoDataView.xib in Resources */,
 				E325E3D422717578008FD6DF /* area.json in Resources */,
-				E325E80A22719289008FD6DF /* HomeTableViewCell.xib in Resources */,
 				E325E3E822717578008FD6DF /* PublishSourceHeaderView.xib in Resources */,
 				E325E3DD22717578008FD6DF /* ShakeView.xib in Resources */,
 				E325E3B622717578008FD6DF /* LRSwitchStudentView.xib in Resources */,
@@ -1630,6 +1629,7 @@
 				E325E3C122717578008FD6DF /* PopupSelectDayView.xib in Resources */,
 				E325E3DA22717578008FD6DF /* CodeSuccessView.xib in Resources */,
 				E325E3A022717578008FD6DF /* aip.license in Resources */,
+				E3BFE1662271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib in Resources */,
 				E325E3AE22717578008FD6DF /* PopSelectListTableViewCell.xib in Resources */,
 				E325E3D022717578008FD6DF /* MSCommentEditView.xib in Resources */,
 				E325E3B422717578008FD6DF /* SKPhotoBrowser.bundle in Resources */,
@@ -1745,6 +1745,7 @@
 				E325E3E722717578008FD6DF /* PublishSourceHeaderView.swift in Sources */,
 				E325E40122717578008FD6DF /* MenuView.swift in Sources */,
 				E325E3A522717578008FD6DF /* NSDate+BRPickerView.m in Sources */,
+				E3BFE1652271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift in Sources */,
 				E325E3BD22717578008FD6DF /* LHImageCompressor.m in Sources */,
 				E325E3FD22717578008FD6DF /* HSPopupSelectDayView.swift in Sources */,
 				E325E40522717578008FD6DF /* LHHTTPData.swift in Sources */,
@@ -1780,7 +1781,6 @@
 				E325E3B522717578008FD6DF /* LRSwitchStudentView.swift in Sources */,
 				E325E40A22717578008FD6DF /* Logistics.xcdatamodeld in Sources */,
 				E325E3EE22717578008FD6DF /* SwiftyPhotoClipper.swift in Sources */,
-				E325E80922719289008FD6DF /* HomeTableViewCell.swift in Sources */,
 				E325E3B222717578008FD6DF /* UIView + Cornner.swift in Sources */,
 				E325E38822717578008FD6DF /* VersionModel.swift in Sources */,
 				E325E69122717751008FD6DF /* LoginViewController.swift in Sources */,

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TuShuGuan" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="RdR-kp-vla" id="7ph-hP-tOt"/>
+                <outlet property="collectionView" destination="luB-v7-GlO" id="ezK-rP-TlB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,18 +21,23 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RdR-kp-vla">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="luB-v7-GlO">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="sectionIndexBackgroundColor" red="0.92549019610000005" green="0.94509803920000002" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </tableView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="a5B-zi-dag">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="RdR-kp-vla" secondAttribute="bottom" id="9Uq-IN-bqv"/>
-                <constraint firstItem="RdR-kp-vla" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MIc-2I-lpT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="RdR-kp-vla" secondAttribute="trailing" id="MS3-72-hiU"/>
-                <constraint firstItem="RdR-kp-vla" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SEs-J7-mUS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="luB-v7-GlO" secondAttribute="bottom" id="cB8-ZB-jIi"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="luB-v7-GlO" secondAttribute="trailing" id="da3-CG-2Re"/>
+                <constraint firstItem="luB-v7-GlO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="pw3-Id-YKj"/>
+                <constraint firstItem="luB-v7-GlO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="wz9-rj-rfc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

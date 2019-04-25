@@ -10,6 +10,7 @@ import UIKit
 
 class PersonRegisterViewController: BaseViewController {
     
+    @IBOutlet weak var idCardTextField: UITextField!
     var headImage:UIImage!
     @IBOutlet weak var headButton: UIButton!
     @IBOutlet var getCodeButton: UIButton!
@@ -168,6 +169,10 @@ extension PersonRegisterViewController{
         }
         if String.isNilOrEmpty(professionTextField.text){
             LHAlertView.showTipAlertWithTitle("专业不能为空")
+            return false
+        }
+        if String.isNilOrEmpty(idCardTextField.text){
+            LHAlertView.showTipAlertWithTitle("身份证号不能为空")
             return false
         }
         if headImage == nil{
