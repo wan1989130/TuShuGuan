@@ -22,10 +22,10 @@ class ApplyViewControllerCollectionViewCell: UICollectionViewCell {
 //        self.layer.borderWidth = 0.5
 //        self.layer.borderColor = UIColor.lightGray.cgColor
     }
-//    func update(model:ApplyToolModel){
-//        nameLabel.text = model.text
-//        iconImageView.image = model.image
-//    }
+    func update(model:ApplyToolModel){
+        nameLabel.text = model.text
+        iconImageView.sd_setImage(with: URL.init(string: FileAccessHost + model.icon))
+    }
 
 
 }

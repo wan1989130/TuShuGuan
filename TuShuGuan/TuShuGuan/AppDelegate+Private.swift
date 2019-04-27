@@ -85,11 +85,17 @@ extension AppDelegate {
     //跳转至首页
     func performToMainViewController(){
         
-        let tabbarVC = BaseTabBarViewController()
-        
-        window?.rootViewController = tabbarVC
-        window?.makeKeyAndVisible()
+//        let tabbarVC = BaseTabBarViewController()
+//
+//        window?.rootViewController = tabbarVC
+//        window?.makeKeyAndVisible()
 //        window?.layer.add(CATransition.animationWithType(.push, direction: .top), forKey: nil)
+        
+        let tabbarVC = HomeViewController.loadViewController("HomeViewController")
+        let navVc = BaseNavigationViewController.init(rootViewController: tabbarVC)
+        window?.rootViewController = navVc
+        window?.makeKeyAndVisible()
+//        UIApplication.shared.keyWindow?.layer.add(CATransition.animationWithType(.push, direction: .top), forKey: nil)
     }
     func getCurrentUser(){
         let config = MyConfig.shared()

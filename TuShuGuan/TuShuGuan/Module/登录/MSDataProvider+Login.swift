@@ -12,13 +12,13 @@ extension MSDataProvider{
     //登陆接口
     class func login(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
         
-        LHHttpDataProvider.getDataForDelegate(delegate, path: "loginaction", withParams: parameter, verson: nil, completionBlock: completionBlock)
+        LHHttpDataProvider.getDataForDelegate(delegate, path: "userLogin", withParams: parameter, verson: nil, completionBlock: completionBlock)
     }
  
     //添加注册的新用户
     class func register(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
         
-        LHHttpDataProvider.postDataForDelegate(delegate, path: "register.do", withParams: parameter, verson: nil, completionBlock: completionBlock)
+        LHHttpDataProvider.postDataForDelegate(delegate, path: "regStudent", withParams: parameter, verson: nil, completionBlock: completionBlock)
     }
  
     //获取验证码

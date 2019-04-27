@@ -274,6 +274,8 @@ class LHHTTPClient: NSObject {
                 completionBlock(true, "", nil)
             }
             else{
+                let result = self.getJSONStringFromDictionary(dictionary: info as! NSDictionary)
+                print("返回的数据 = \(result)")
                 _ = self.getJSONStringFromDictionary(dictionary: info as! NSDictionary)
                 if LHHTTPClient.hud != nil{
                     self.hideHud(vc: hideVc)

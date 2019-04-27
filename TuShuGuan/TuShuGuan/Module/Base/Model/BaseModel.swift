@@ -42,7 +42,7 @@ class BaseModel: Mappable {
             code <- (map["code"],transfromOfCustomFunction())
         }
         lastPage <- map["lastPage"]
-        msg <- map["msg"]
+        msg <- map["message"]
     }
     //    // 自己定义的某些操作的方法 int转string
     func transfromOfCustomFunction() ->TransformOf< String, Int>{

@@ -93,7 +93,7 @@ let StaticProtocoHtml = "resources/common/user_agreement.html"
 //正式服务器
 var HostAddress = "http://175.19.7.55:9081/splib/frt/"
 var FileServerAddress = "http://218.27.84.59:18085/sjcj_web/phoneCon/uploadPhoto.do"// 上传文件
-var FileAccessHost = "http://218.27.84.59:18085/sjcj_web/kssh/getImg.do?cx=" // 显示文件
+var FileAccessHost = "http://175.19.7.55:9081/splib" // 显示文件
 var Protocolhtml = "http://218.27.84.59:18085/sjcj_web/phoneCon/toAgreement.do"
 
 

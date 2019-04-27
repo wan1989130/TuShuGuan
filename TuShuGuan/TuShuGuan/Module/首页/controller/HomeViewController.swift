@@ -20,6 +20,7 @@ class HomeViewController: BaseViewController {
         title = "首页"
         initData()
         initUI()
+        getApps()
     }
     
     deinit {
@@ -69,10 +70,7 @@ extension HomeViewController{
 extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource{
     //每个区的item个数
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        
-        return 10
-        
+        return dataController.toolArray.count
     }
     //分区个数
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -83,28 +81,36 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ApplyViewControllerCollectionViewCell", for: indexPath) as! ApplyViewControllerCollectionViewCell
-//        cell.update(model: dataArray[indexPath.row])
-//        if indexPath.row > 2{
-//            cell.topLabel.isHidden = true
-//        }else{
-//            cell.topLabel.isHidden = false
-//        }
-//        if indexPath.row % 3 > 0{
-//            cell.leftLabel.isHidden = true
-//        }else{
-//            cell.leftLabel.isHidden = false
-//        }
-//        if indexPath.row == 1{
-//            cell.nameLabel.font = UIFont.systemFont(ofSize: 16)
-//            cell.nameLabel.textColor = UIColor.red
-//        }else{
-//            cell.nameLabel.font = UIFont.systemFont(ofSize: 13)
-//            cell.nameLabel.textColor = UIColor(hexString: "555555")
-//        }
+        cell.update(model: dataController.toolArray[indexPath.row])
+        if indexPath.row > 3{
+            cell.topLabel.isHidden = true
+        }else{
+            cell.topLabel.isHidden = false
+        }
+        if indexPath.row % 4 > 0{
+            cell.leftLabel.isHidden = true
+        }else{
+            cell.leftLabel.isHidden = false
+        }
+       
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        pro.collectionIndexClick(index: indexPath.row)
         pushViewController("SeatViewController")
+    }
+}
+extension HomeViewController{
+    func getApps(){
+       
+        let parameter:NSMutableDictionary = [
+            :
+            
+        ]
+        dataController.getApps(parameter: parameter) { [weak self](isSucceed, info) in
+            if isSucceed {
+                self?.collectionView.reloadData()
+            }
+        }
     }
 }

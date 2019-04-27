@@ -35,6 +35,9 @@ class PersonRegisterDataController: BaseDataController {
             if isSuccess{
                 let model = Mapper<LoginModel>().map(JSONObject: result)
                 if model != nil{
+                    if model?.msg != nil{
+                        LHAlertView.showTipAlertWithTitle(model!.msg!)
+                    }
 //                    MyConfig.shared().token = model!.data.token
                     completionBlock(true, nil)
                 }else{

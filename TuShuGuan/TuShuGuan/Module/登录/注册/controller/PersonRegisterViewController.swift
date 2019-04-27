@@ -156,7 +156,7 @@ extension PersonRegisterViewController{
             return false
         }
         if String.isNilOrEmpty(confirmPasswordTextField.text){
-            LHAlertView.showTipAlertWithTitle("验证密码不能为空")
+            LHAlertView.showTipAlertWithTitle("确认密码不能为空")
             return false
         }
         if confirmPasswordTextField.text != passwordTextField.text{
@@ -173,6 +173,9 @@ extension PersonRegisterViewController{
         }
         if String.isNilOrEmpty(idCardTextField.text){
             LHAlertView.showTipAlertWithTitle("身份证号不能为空")
+            return false
+        }
+        if !idCardTextField.text!.isLegalIdCard(){
             return false
         }
         if headImage == nil{
@@ -207,12 +210,14 @@ extension PersonRegisterViewController{
         let imageData:Data = headImage.jpegData(compressionQuality: 0.5)!
         var imageBase64String = imageData.base64EncodedString()
         let parameter:NSMutableDictionary = [
-            "username":userNameTextField.text!,
+            "name":userNameTextField.text!,
             "password":passwordTextField.text!,
-            "className":classNameTextField.text!,
-            "professionName":professionTextField.text!,
-            "verifyCode":codeTextField.text!,
-            "photoUrl":imageBase64String
+            "college":classNameTextField.text!,
+            "major":professionTextField.text!,
+            "valigatecode":codeTextField.text!,
+            "base64Str":imageBase64String,
+            "idcard":idCardTextField.text!,
+            "phone":phoneTextField.text!
             
             ]
         dataController.register(parameter: parameter) { [weak self](isSucceed, info) in
@@ -225,12 +230,12 @@ extension PersonRegisterViewController{
     }
     //跳转至主页
     fileprivate func showMainTab(){
-        
-        let tabbarVC = HomeViewController.loadViewController("HomeViewController")
-        let navVc = BaseNavigationViewController.init(rootViewController: tabbarVC)
-        UIApplication.shared.keyWindow?.rootViewController = navVc
-        UIApplication.shared.keyWindow?.makeKeyAndVisible()
-        UIApplication.shared.keyWindow?.layer.add(CATransition.animationWithType(.push, direction: .top), forKey: nil)
+        self.navigationController?.popViewController(animated: true)
+//        let tabbarVC = HomeViewController.loadViewController("HomeViewController")
+//        let navVc = BaseNavigationViewController.init(rootViewController: tabbarVC)
+//        UIApplication.shared.keyWindow?.rootViewController = navVc
+//        UIApplication.shared.keyWindow?.makeKeyAndVisible()
+//        UIApplication.shared.keyWindow?.layer.add(CATransition.animationWithType(.push, direction: .top), forKey: nil)
     }
 }
 

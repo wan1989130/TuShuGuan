@@ -196,6 +196,8 @@
 		E325E80F22719439008FD6DF /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E80D22719439008FD6DF /* SeatViewController.swift */; };
 		E325E81022719439008FD6DF /* SeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80E22719439008FD6DF /* SeatViewController.xib */; };
 		E325E813227195D0008FD6DF /* SeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E812227195D0008FD6DF /* SeatModel.swift */; };
+		E38F70182273F1820006DE4C /* MSDataProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */; };
+		E38F701C2273F5FE0006DE4C /* ApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F701B2273F5FE0006DE4C /* ApplyModel.swift */; };
 		E3BFE1652271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */; };
 		E3BFE1662271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3BFE1642271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -480,6 +482,8 @@
 		E325E80D22719439008FD6DF /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		E325E80E22719439008FD6DF /* SeatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatViewController.xib; sourceTree = "<group>"; };
 		E325E812227195D0008FD6DF /* SeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatModel.swift; sourceTree = "<group>"; };
+		E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDataProvider+Home.swift"; sourceTree = "<group>"; };
+		E38F701B2273F5FE0006DE4C /* ApplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyModel.swift; sourceTree = "<group>"; };
 		E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewControllerCollectionViewCell.swift; sourceTree = "<group>"; };
 		E3BFE1642271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApplyViewControllerCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1432,8 +1436,10 @@
 		E325E7F3227181B4008FD6DF /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				E38F701A2273F5CF0006DE4C /* model */,
 				E325E80622719275008FD6DF /* cell */,
 				E325E7F4227181BD008FD6DF /* controller */,
+				E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -1489,6 +1495,14 @@
 			isa = PBXGroup;
 			children = (
 				E325E812227195D0008FD6DF /* SeatModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		E38F701A2273F5CF0006DE4C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E38F701B2273F5FE0006DE4C /* ApplyModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1756,8 +1770,10 @@
 				E325E41022717578008FD6DF /* SBJsonStreamParserState.m in Sources */,
 				E325E23022717256008FD6DF /* ViewController.swift in Sources */,
 				E325E3E522717578008FD6DF /* NoDataView.swift in Sources */,
+				E38F70182273F1820006DE4C /* MSDataProvider+Home.swift in Sources */,
 				E325E39622717578008FD6DF /* NSDictionary+LH.m in Sources */,
 				E325E39022717578008FD6DF /* UIView+LH.swift in Sources */,
+				E38F701C2273F5FE0006DE4C /* ApplyModel.swift in Sources */,
 				E325E38522717578008FD6DF /* Config.swift in Sources */,
 				E325E7E822717751008FD6DF /* BaseOnlyClassDataModel.swift in Sources */,
 				E325E68622717751008FD6DF /* UserModel.swift in Sources */,
@@ -2063,6 +2079,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN9FP4NC8P;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TuShuGuan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2089,6 +2107,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZN9FP4NC8P;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TuShuGuan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

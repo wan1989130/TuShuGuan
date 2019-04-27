@@ -57,8 +57,8 @@ class LoginViewController: BaseViewController {
    
     
     @IBAction func loginButtonClicked(_ sender: UIButton) {
-        self.showMainTab()
-        return
+//        self.showMainTab()
+//        return
         closeKeyboard()
 
         if !checkFun(){
@@ -67,7 +67,7 @@ class LoginViewController: BaseViewController {
 //        self.showMainTab()
         let parameter:NSMutableDictionary = [
             "loginid":userNameTextField.text!,
-            "loginpassword":passwordTextField.text!,
+            "password":passwordTextField.text!,
 
         ]
         weak var weakSelf = self
