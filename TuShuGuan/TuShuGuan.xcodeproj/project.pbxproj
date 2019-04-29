@@ -195,7 +195,9 @@
 		E325E8052271925E008FD6DF /* HomeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E8042271925E008FD6DF /* HomeDataController.swift */; };
 		E325E80F22719439008FD6DF /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E80D22719439008FD6DF /* SeatViewController.swift */; };
 		E325E81022719439008FD6DF /* SeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80E22719439008FD6DF /* SeatViewController.xib */; };
-		E325E813227195D0008FD6DF /* SeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E812227195D0008FD6DF /* SeatModel.swift */; };
+		E351BF162277493D00D00963 /* SeatDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF152277493D00D00963 /* SeatDataViewController.swift */; };
+		E351BF182277495900D00963 /* MSDataProvider+Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF172277495900D00963 /* MSDataProvider+Seat.swift */; };
+		E351BF1A22774A5A00D00963 /* SeatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF1922774A5A00D00963 /* SeatDataModel.swift */; };
 		E38F70182273F1820006DE4C /* MSDataProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */; };
 		E38F701C2273F5FE0006DE4C /* ApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F701B2273F5FE0006DE4C /* ApplyModel.swift */; };
 		E3BFE1652271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */; };
@@ -481,7 +483,9 @@
 		E325E8042271925E008FD6DF /* HomeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataController.swift; sourceTree = "<group>"; };
 		E325E80D22719439008FD6DF /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		E325E80E22719439008FD6DF /* SeatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatViewController.xib; sourceTree = "<group>"; };
-		E325E812227195D0008FD6DF /* SeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatModel.swift; sourceTree = "<group>"; };
+		E351BF152277493D00D00963 /* SeatDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataViewController.swift; sourceTree = "<group>"; };
+		E351BF172277495900D00963 /* MSDataProvider+Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDataProvider+Seat.swift"; sourceTree = "<group>"; };
+		E351BF1922774A5A00D00963 /* SeatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataModel.swift; sourceTree = "<group>"; };
 		E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDataProvider+Home.swift"; sourceTree = "<group>"; };
 		E38F701B2273F5FE0006DE4C /* ApplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyModel.swift; sourceTree = "<group>"; };
 		E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewControllerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1478,6 +1482,7 @@
 			children = (
 				E325E811227195BF008FD6DF /* model */,
 				E325E80C22719423008FD6DF /* controller */,
+				E351BF172277495900D00963 /* MSDataProvider+Seat.swift */,
 			);
 			path = "座位";
 			sourceTree = "<group>";
@@ -1485,6 +1490,7 @@
 		E325E80C22719423008FD6DF /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				E351BF152277493D00D00963 /* SeatDataViewController.swift */,
 				E325E80D22719439008FD6DF /* SeatViewController.swift */,
 				E325E80E22719439008FD6DF /* SeatViewController.xib */,
 			);
@@ -1494,7 +1500,7 @@
 		E325E811227195BF008FD6DF /* model */ = {
 			isa = PBXGroup;
 			children = (
-				E325E812227195D0008FD6DF /* SeatModel.swift */,
+				E351BF1922774A5A00D00963 /* SeatDataModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -1784,7 +1790,6 @@
 				E325E41522717578008FD6DF /* SBJsonStreamWriterState.m in Sources */,
 				E325E3CA22717578008FD6DF /* UIPlaceholderTextView.m in Sources */,
 				E325E3A822717578008FD6DF /* BRAddressModel.m in Sources */,
-				E325E813227195D0008FD6DF /* SeatModel.swift in Sources */,
 				E325E3AA22717578008FD6DF /* BRAddressPickerView.m in Sources */,
 				E325E3C822717578008FD6DF /* TTPaomaView.swift in Sources */,
 				E325E7F022717751008FD6DF /* BaseTabBarViewController.swift in Sources */,
@@ -1816,6 +1821,7 @@
 				E325E38D22717578008FD6DF /* Data+LH.swift in Sources */,
 				E325E68C22717751008FD6DF /* SelectAreaPopupViewTableViewCell.swift in Sources */,
 				E325E3D622717578008FD6DF /* CompanyRegisterSuccessView.swift in Sources */,
+				E351BF162277493D00D00963 /* SeatDataViewController.swift in Sources */,
 				E325E3AD22717578008FD6DF /* PoPSelectListView.swift in Sources */,
 				E325E40422717578008FD6DF /* LHHttpDataProvider.swift in Sources */,
 				E325E7E722717751008FD6DF /* NotifyDataModel.swift in Sources */,
@@ -1866,6 +1872,7 @@
 				E325E38422717578008FD6DF /* MSDataProvider+Common.swift in Sources */,
 				E325E3B322717578008FD6DF /* JQRadiusView.m in Sources */,
 				E325E41C22717578008FD6DF /* BMChineseSort.swift in Sources */,
+				E351BF1A22774A5A00D00963 /* SeatDataModel.swift in Sources */,
 				E325E40922717578008FD6DF /* MD5Encoder.m in Sources */,
 				E325E40322717578008FD6DF /* BaseTextField.swift in Sources */,
 				E325E38A22717578008FD6DF /* UIAlertController+LH.swift in Sources */,
@@ -1897,6 +1904,7 @@
 				E325E3BF22717578008FD6DF /* SelectChangQiDateView.swift in Sources */,
 				E325E3E422717578008FD6DF /* extension+NSLayoutConstraint.swift in Sources */,
 				E325E68722717751008FD6DF /* StudentModel.swift in Sources */,
+				E351BF182277495900D00963 /* MSDataProvider+Seat.swift in Sources */,
 				E325E38F22717578008FD6DF /* String+LH.swift in Sources */,
 				E325E80122718253008FD6DF /* PersonRegisterViewController.swift in Sources */,
 				E325E39E22717578008FD6DF /* NSData+LH.m in Sources */,

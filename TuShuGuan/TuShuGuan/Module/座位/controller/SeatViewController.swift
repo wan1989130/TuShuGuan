@@ -10,38 +10,40 @@ import UIKit
 
 class SeatViewController: BaseViewController {
 
+    var dataController:SeatDataViewController!
     var selectedModel:FVSeatItem?
     var oldSelectedDic = NSMutableDictionary()
     var selectedDic = NSMutableDictionary()
     var seatsInfo2 = [FVSeatItem]()
     let picker = FVSeatsPicker()
-    var seatMaxX = 10
-    var seatMaxY = 10
-    var maxSeatNum = 0
-    var dataArray = [SeatModel]()
-    var tempDataArray = [SeatModel]()
+    var seatMaxX = 0
+    var seatMaxY = 0
+    
+    var dataArray = [SeatItemModel]()
+    var tempDataArray = [SeatItemModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        for i in 0..<100{
-            let model = SeatModel()
-            if i == 0 {
-                model.status = .seatsStateUnavailable
-            }
-            if i == 1 {
-                model.status = .seatsStateSellOut
-            }
-           
-            if i == 2 {
-                model.status = .seatsStateSelected
-            }
-            model.name = "第\(i)"
-            dataArray.append(model)
-        }
+//        for i in 0..<100{
+//            let model = SeatModel()
+//            if i == 0 {
+//                model.status = .seatsStateUnavailable
+//            }
+//            if i == 1 {
+//                model.status = .seatsStateSellOut
+//            }
+//           
+//            if i == 2 {
+//                model.status = .seatsStateSelected
+//            }
+//            model.name = "第\(i)"
+//            dataArray.append(model)
+//        }
         title = "选座"
         initData()
         initUI()
+        getSeats()
     }
 
 
@@ -59,12 +61,12 @@ extension SeatViewController{
         picker.setImage(UIImage.init(named: "yx"), for: .selected)
         picker.frame = CGRect(x: 0, y: 100, width: ScreenWidth, height: ScreenHeight - 100 - CGFloat(navHeight) - 40)
         self.view.addSubview(picker)
-        loadData()
+        
         
         
     }
     fileprivate func initData(){
-        
+        dataController = SeatDataViewController(delegate: self)
         
         
     }
@@ -99,7 +101,7 @@ extension SeatViewController{
         for i in 1...tempDataArray.count{
             let seatsInfo = FVSeatItem()
             seatsInfo.seatName = tempDataArray[i-1].name
-           
+            seatsInfo.seatId = Int32(tempDataArray[i-1].id)!
             seatsInfo.col = Int32(tempDataArray[i-1].col)!
             seatsInfo.row = Int32(tempDataArray[i-1].row)!
             seatsInfo.coordinateX = Int32(tempDataArray[i-1].col)!
@@ -143,7 +145,12 @@ extension SeatViewController:FVSeatsPickerDelegate{
     }
     func seatsPicker(_ picker: FVSeatsPicker!, didSelectSeat seatInfo: FVSeatItem!) {
         if selectedModel != nil{
-            selectedModel!.seatStatus = .seatsStateAvailable
+            for item in seatsInfo2{
+                if item.seatId == selectedModel?.seatId{
+                    item.seatStatus = .seatsStateAvailable
+                    break
+                }
+            }
         }
         selectedModel = seatInfo
         seatInfo.seatStatus = .seatsStateSelected
@@ -166,3 +173,45 @@ extension SeatViewController:FVSeatsPickerDelegate{
 }
 
 
+extension SeatViewController{
+    func getSeats(){
+        
+        let parameter:NSMutableDictionary = [
+            "stuPhone":"13980881222"
+            
+        ]
+        dataController.querySelectSite(parameter: parameter) { [weak self](isSucceed, info) in
+            if isSucceed {
+                self?.oprdata()
+            }
+        }
+    }
+    func oprdata(){
+        for item in dataController.model.data.seats{
+            if item.id == dataController.model.data.selectedSeatId{
+                item.status = .seatsStateSelected
+                if dataController.model.data.selectedSeatId != ""{
+                    let model = FVSeatItem()
+                    model.col = Int32((dataController.model.data.selectedCol))!
+                    model.row = Int32((dataController.model.data.selectedRow))!
+                    model.seatStatus = .seatsStateSelected
+                    model.seatName = (dataController.model.data.selectedName)
+                    model.seatId = Int32((dataController.model.data.selectedSeatId))!
+                    selectedModel = model
+                    selectedDic[model.seatId] = model
+                }
+                break
+            }
+        }
+        dataArray = dataController.model.data.seats ?? [SeatItemModel]()
+        if dataController.model.data.maxRow != "" && dataController.model.data.maxCol != ""{
+            seatMaxX = Int((dataController.model.data.maxRow))!
+            seatMaxY = Int((dataController.model.data.maxCol))!
+        }
+        
+        
+        
+        loadData()
+        picker.reloadData()
+    }
+}
