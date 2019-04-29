@@ -10,6 +10,22 @@ import UIKit
 
 class SeatViewController: BaseViewController {
 
+    @IBAction func ChongXuanClick(_ sender: UIButton) {
+        if selectedModel != nil{
+            for item in seatsInfo2{
+                if item.seatId == selectedModel?.seatId{
+                    item.seatStatus = .seatsStateAvailable
+                    break
+                }
+            }
+            selectedDic.removeObject(forKey: selectedModel!.seatId)
+        }
+        selectedModel = nil
+        
+        seatNameLabel.text = "您的座位："
+        picker.reloadData()
+    }
+    @IBOutlet weak var seatNameLabel: UILabel!
     var dataController:SeatDataViewController!
     var selectedModel:FVSeatItem?
     var oldSelectedDic = NSMutableDictionary()
@@ -155,7 +171,7 @@ extension SeatViewController:FVSeatsPickerDelegate{
         selectedModel = seatInfo
         seatInfo.seatStatus = .seatsStateSelected
             selectedDic.removeAllObjects()
-        
+        seatNameLabel.text = "您的座位：\(seatInfo.seatName!)"
         
         selectedDic[seatInfo.seatId] = seatInfo
         picker.reloadData()
