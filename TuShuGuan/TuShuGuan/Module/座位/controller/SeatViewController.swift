@@ -28,6 +28,8 @@ class SeatViewController: BaseViewController {
     @IBOutlet weak var seatNameLabel: UILabel!
     var dataController:SeatDataViewController!
     var selectedModel:FVSeatItem?
+    var selectedId = ""
+    var selectedName = ""
     var oldSelectedDic = NSMutableDictionary()
     var selectedDic = NSMutableDictionary()
     var seatsInfo2 = [FVSeatItem]()
@@ -205,6 +207,7 @@ extension SeatViewController{
     func oprdata(){
         for item in dataController.model.data.seats{
             if item.id == dataController.model.data.selectedSeatId{
+                
                 item.status = .seatsStateSelected
                 if dataController.model.data.selectedSeatId != ""{
                     let model = FVSeatItem()
@@ -221,6 +224,7 @@ extension SeatViewController{
         }
         dataArray = dataController.model.data.seats ?? [SeatItemModel]()
         if dataController.model.data.maxRow != "" && dataController.model.data.maxCol != ""{
+            seatNameLabel.text = "您的座位：\(dataController.model.data.selectedName)"
             seatMaxX = Int((dataController.model.data.maxRow))!
             seatMaxY = Int((dataController.model.data.maxCol))!
         }
