@@ -25,6 +25,12 @@ extension AppDelegate {
     
     //根据应用版本及登录状态跳转至相应页面
     func performToTargetVCAccordingToVersionAndLoginStatus(){
+        
+        let loginVC = SeatNewViewController(nibName: "SeatNewViewController", bundle: nil)
+        let navController = BaseNavigationViewController(rootViewController: loginVC)
+        window?.rootViewController = navController
+        //        window?.rootViewController = loginVC
+        window?.makeKeyAndVisible()
 //        performToLoginViewController()
         
         
@@ -46,15 +52,15 @@ extension AppDelegate {
 //        else{
 //                                performToLoginViewController()
 ////                  performToMainViewController()
-            if MyConfig.shared().token != ""{
-               
-                    //如果登录过,并且本地有用户登录信息,跳转至首页
-                    performToMainViewController()
-              
-            }else{
-                //未登录过,跳转至登录页
-                performToLoginViewController()
-            }
+//            if MyConfig.shared().token != ""{
+//
+//                    //如果登录过,并且本地有用户登录信息,跳转至首页
+//                    performToMainViewController()
+//
+//            }else{
+//                //未登录过,跳转至登录页
+//                performToLoginViewController()
+//            }
 //
 //        }
     }

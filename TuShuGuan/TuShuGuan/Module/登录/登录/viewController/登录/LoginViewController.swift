@@ -76,7 +76,8 @@ class LoginViewController: BaseViewController {
                 MyConfig.shared().phone = (self?.userNameTextField.text!)!
                 
                 MyConfig.shared().userName = (self?.passwordTextField.text!)!
-                weakSelf?.showMainTab()
+//                weakSelf?.showMainTab()
+                weakSelf?.pushViewController("SeatNewViewController")
             }else {
 
             }

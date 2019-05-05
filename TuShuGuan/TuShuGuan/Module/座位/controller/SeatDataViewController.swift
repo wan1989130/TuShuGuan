@@ -11,18 +11,38 @@ import ObjectMapper
 class SeatDataViewController: BaseDataController {
     
     var model:SeatDataModel!
+    var saveModel:SaveSeatDataModel!
     //首页
     func querySelectSite(parameter:NSMutableDictionary,completionBlock:@escaping RequestCompleteBlock){
         MSDataProvider.querySelectSite(delegate: self.delegate!, parameter: parameter) { (isSuccess,result) in
             if isSuccess{
                 let model = Mapper<SeatDataModel>().map(JSONObject: result)
                 if model != nil{
-                   
+                    
                     self.model = model
                     completionBlock(true, nil)
                 }else{
                     completionBlock(false, nil)
                 }
+                
+            }else{
+                completionBlock(false, nil)
+            }
+        }
+    }
+    //保存
+    func saveSelectSeat(parameter:NSMutableDictionary,completionBlock:@escaping RequestCompleteBlock){
+        MSDataProvider.saveSelectSeat(delegate: self.delegate!, parameter: parameter) { (isSuccess,result) in
+            if isSuccess{
+                let model = Mapper<SaveSeatDataModel>().map(JSONObject: result)
+                if model != nil{
+                    model?.data
+                    self.saveModel = model
+                    completionBlock(true, nil)
+                }else{
+                    completionBlock(false, nil)
+                }
+                
                 
             }else{
                 completionBlock(false, nil)

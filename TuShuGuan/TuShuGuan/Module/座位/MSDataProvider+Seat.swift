@@ -14,7 +14,12 @@ extension MSDataProvider{
     //座位
     class func querySelectSite(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
         
-        LHHttpDataProvider.getDataForDelegate(delegate, path: "querySelectSite", withParams: parameter, verson: nil, completionBlock: completionBlock)
+        LHHttpDataProvider.getDataForDelegate(delegate, path: "querySelectSeat", withParams: parameter, verson: nil, completionBlock: completionBlock)
+    }
+    //保存座位
+    class func saveSelectSeat(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
+        
+        LHHttpDataProvider.postDataForDelegate(delegate, path: "saveSelectSeat", withParams: parameter, verson: nil, completionBlock: completionBlock)
     }
     
     

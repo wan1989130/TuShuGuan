@@ -10,6 +10,9 @@ import UIKit
 
 class SeatViewController: BaseViewController {
 
+    @IBAction func confirmClick(_ sender: Any) {
+        saveSelectSeat()
+    }
     @IBAction func ChongXuanClick(_ sender: UIButton) {
         if selectedModel != nil{
             for item in seatsInfo2{
@@ -20,8 +23,8 @@ class SeatViewController: BaseViewController {
             }
             selectedDic.removeObject(forKey: selectedModel!.seatId)
         }
-        selectedModel = nil
-        
+//        selectedModel = nil
+        selectedModel?.seatStatus = .seatsStateAvailable
         seatNameLabel.text = "您的座位："
         picker.reloadData()
     }
@@ -180,7 +183,10 @@ extension SeatViewController:FVSeatsPickerDelegate{
         print(seatInfo)
     }
     func seatsPicker(_ picker: FVSeatsPicker!, didDeselectSeat seatInfo: FVSeatItem!) {
-        selectedModel = nil
+        if selectedModel != nil{
+            selectedModel?.seatStatus = .seatsStateAvailable
+        }
+        
         selectedDic.removeObject(forKey: seatInfo.seatId)
         seatInfo.seatStatus = .seatsStateAvailable
         picker.reloadData()
@@ -195,7 +201,7 @@ extension SeatViewController{
     func getSeats(){
         
         let parameter:NSMutableDictionary = [
-            "stuPhone":"13980881222"
+            :
             
         ]
         dataController.querySelectSite(parameter: parameter) { [weak self](isSucceed, info) in
@@ -233,5 +239,40 @@ extension SeatViewController{
         
         loadData()
         picker.reloadData()
+    }
+    func saveSelectSeat(){
+        if selectedModel == nil{
+            LHAlertView.showTipAlertWithTitle("请选择座位")
+            return
+        }
+        let parameter:NSMutableDictionary = [
+            "seatId":String(selectedModel!.seatId),
+            "status":String(selectedModel!.seatStatus.rawValue),
+            "token":MyConfig.shared().token
+            
+        ]
+        dataController.saveSelectSeat(parameter: parameter) { [weak self](isSucceed, info) in
+            if isSucceed {
+               self?.isRefresh()
+            }else{
+//                self?.getSeats()
+            }
+        }
+    }
+    
+    func isRefresh(){
+        
+        if dataController.saveModel != nil && dataController.saveModel!.msg != nil{
+            
+            if dataController.saveModel.data.checkVal == "0"{
+                LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
+            }else if dataController.saveModel.data.checkVal == "1"{
+                LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
+            }else if dataController.saveModel.data.checkVal == "2"{
+                LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
+                self.getSeats()
+            }
+            
+        }
     }
 }

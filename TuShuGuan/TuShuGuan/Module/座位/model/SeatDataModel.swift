@@ -56,12 +56,14 @@ class SeatModel:BaseModel{
 class SeatItemModel:BaseModel{
     var col = ""
     var row = ""
-    
+    var seatId = ""
     var tempStatus = ""
     var status:FVSeatState = .seatsStateAvailable
+    var newStatus = ""//0可选1已选
     override func mapping(map: Map) {
         super.mapping(map: map)
         col    <- map["col"]
+        seatId    <- map["seatId"]
         row    <- map["row"]
         tempStatus    <- map["tempStatus"]
        
@@ -74,5 +76,6 @@ class SeatItemModel:BaseModel{
         }else if tempStatus == "3"{
             status = .seatsStateSelected
         }
+        newStatus    <- map["status"]
     }
 }

@@ -239,7 +239,7 @@ class LHHTTPClient: NSObject {
             headerURLString = basePath + verson! + "/" + path
         }
          print("访问网络url:\n\(headerURLString!)")
-        
+       
         //创建完整的URL的String对象
         var completeURLString = headerURLString!
         
@@ -259,14 +259,24 @@ class LHHTTPClient: NSObject {
         // 启动系统风火轮
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        let manager = AFHTTPSessionManager()
-        manager.requestSerializer.stringEncoding = String.Encoding.utf8.rawValue
-        manager.requestSerializer.timeoutInterval = 40
+        LHHTTPClient.manager = AFHTTPSessionManager()
         
-        manager.responseSerializer = AFJSONResponseSerializer()
-        manager.responseSerializer.stringEncoding = String.Encoding.utf8.rawValue
-        manager.responseSerializer.acceptableContentTypes = NSSet(objects: "application/json","text/html","text/xml", "text/json", "text/javascript") as? Set<String>
-        manager.get(headerURLString, parameters: completeParams, progress: { (progress) in
+        if MyConfig.shared().token != ""{
+            
+            
+            LHHTTPClient.manager.requestSerializer.setValue(MyConfig.shared().token, forHTTPHeaderField: "token")
+        }
+        
+        
+        LHHTTPClient.manager.requestSerializer.stringEncoding = String.Encoding.utf8.rawValue
+        LHHTTPClient.manager.requestSerializer.timeoutInterval = 40
+        
+        LHHTTPClient.manager.responseSerializer = AFJSONResponseSerializer()
+        LHHTTPClient.manager.responseSerializer.stringEncoding = String.Encoding.utf8.rawValue
+        LHHTTPClient.manager.responseSerializer.acceptableContentTypes = NSSet(objects: "application/json","text/html","text/xml", "text/json", "text/javascript") as? Set<String>
+        LHHTTPClient.manager.get(headerURLString, parameters: completeParams, progress: { (progress) in
+            
+            
         }, success: { (URLSessionDataTaskInfo, info) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             if info == nil {

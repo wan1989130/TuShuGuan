@@ -198,6 +198,12 @@
 		E351BF162277493D00D00963 /* SeatDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF152277493D00D00963 /* SeatDataViewController.swift */; };
 		E351BF182277495900D00963 /* MSDataProvider+Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF172277495900D00963 /* MSDataProvider+Seat.swift */; };
 		E351BF1A22774A5A00D00963 /* SeatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF1922774A5A00D00963 /* SeatDataModel.swift */; };
+		E351BF1C2277FEE200D00963 /* SaveSeatDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF1B2277FEE200D00963 /* SaveSeatDataModel.swift */; };
+		E351BF1F227818BC00D00963 /* SeatNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF1D227818BC00D00963 /* SeatNewViewController.swift */; };
+		E351BF20227818BC00D00963 /* SeatNewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E351BF1E227818BC00D00963 /* SeatNewViewController.xib */; };
+		E351BF22227819FE00D00963 /* 741556601237_.pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E351BF21227819FE00D00963 /* 741556601237_.pic.jpg */; };
+		E351BF2622781AD300D00963 /* SeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF2522781AD300D00963 /* SeatView.swift */; };
+		E351BF2822781ADC00D00963 /* SeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E351BF2722781ADC00D00963 /* SeatView.xib */; };
 		E38F70182273F1820006DE4C /* MSDataProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */; };
 		E38F701C2273F5FE0006DE4C /* ApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F701B2273F5FE0006DE4C /* ApplyModel.swift */; };
 		E3BFE1652271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */; };
@@ -486,6 +492,12 @@
 		E351BF152277493D00D00963 /* SeatDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataViewController.swift; sourceTree = "<group>"; };
 		E351BF172277495900D00963 /* MSDataProvider+Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDataProvider+Seat.swift"; sourceTree = "<group>"; };
 		E351BF1922774A5A00D00963 /* SeatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatDataModel.swift; sourceTree = "<group>"; };
+		E351BF1B2277FEE200D00963 /* SaveSeatDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveSeatDataModel.swift; sourceTree = "<group>"; };
+		E351BF1D227818BC00D00963 /* SeatNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatNewViewController.swift; sourceTree = "<group>"; };
+		E351BF1E227818BC00D00963 /* SeatNewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatNewViewController.xib; sourceTree = "<group>"; };
+		E351BF21227819FE00D00963 /* 741556601237_.pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 741556601237_.pic.jpg; sourceTree = "<group>"; };
+		E351BF2522781AD300D00963 /* SeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatView.swift; sourceTree = "<group>"; };
+		E351BF2722781ADC00D00963 /* SeatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatView.xib; sourceTree = "<group>"; };
 		E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDataProvider+Home.swift"; sourceTree = "<group>"; };
 		E38F701B2273F5FE0006DE4C /* ApplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyModel.swift; sourceTree = "<group>"; };
 		E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewControllerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -553,6 +565,7 @@
 		E325E22C22717256008FD6DF /* TuShuGuan */ = {
 			isa = PBXGroup;
 			children = (
+				E351BF21227819FE00D00963 /* 741556601237_.pic.jpg */,
 				E325E7F12271810D008FD6DF /* districtOne.plist */,
 				E325E26022717577008FD6DF /* Common */,
 				E325E28E22717577008FD6DF /* Library */,
@@ -1480,6 +1493,7 @@
 		E325E80B2271941B008FD6DF /* 座位 */ = {
 			isa = PBXGroup;
 			children = (
+				E351BF2422781AC000D00963 /* view */,
 				E325E811227195BF008FD6DF /* model */,
 				E325E80C22719423008FD6DF /* controller */,
 				E351BF172277495900D00963 /* MSDataProvider+Seat.swift */,
@@ -1493,6 +1507,8 @@
 				E351BF152277493D00D00963 /* SeatDataViewController.swift */,
 				E325E80D22719439008FD6DF /* SeatViewController.swift */,
 				E325E80E22719439008FD6DF /* SeatViewController.xib */,
+				E351BF1D227818BC00D00963 /* SeatNewViewController.swift */,
+				E351BF1E227818BC00D00963 /* SeatNewViewController.xib */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1501,8 +1517,18 @@
 			isa = PBXGroup;
 			children = (
 				E351BF1922774A5A00D00963 /* SeatDataModel.swift */,
+				E351BF1B2277FEE200D00963 /* SaveSeatDataModel.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		E351BF2422781AC000D00963 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E351BF2522781AD300D00963 /* SeatView.swift */,
+				E351BF2722781ADC00D00963 /* SeatView.xib */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		E38F701A2273F5CF0006DE4C /* model */ = {
@@ -1634,6 +1660,7 @@
 				E325E7F22271810D008FD6DF /* districtOne.plist in Resources */,
 				E325E3F122717578008FD6DF /* 示例代码WaterViewController.rtf in Resources */,
 				E325E23522717257008FD6DF /* Assets.xcassets in Resources */,
+				E351BF2822781ADC00D00963 /* SeatView.xib in Resources */,
 				E325E3E622717578008FD6DF /* NoDataView.xib in Resources */,
 				E325E3D422717578008FD6DF /* area.json in Resources */,
 				E325E3E822717578008FD6DF /* PublishSourceHeaderView.xib in Resources */,
@@ -1654,6 +1681,8 @@
 				E325E3D022717578008FD6DF /* MSCommentEditView.xib in Resources */,
 				E325E3B422717578008FD6DF /* SKPhotoBrowser.bundle in Resources */,
 				E325E3AC22717578008FD6DF /* README.md in Resources */,
+				E351BF22227819FE00D00963 /* 741556601237_.pic.jpg in Resources */,
+				E351BF20227818BC00D00963 /* SeatNewViewController.xib in Resources */,
 				E325E3C422717578008FD6DF /* HSRightBarButtonItemMenu示例代码.rtf in Resources */,
 				E325E69022717751008FD6DF /* LoginViewController.xib in Resources */,
 				E325E23322717256008FD6DF /* Main.storyboard in Resources */,
@@ -1757,6 +1786,7 @@
 			files = (
 				E325E3DC22717578008FD6DF /* ShakeView.swift in Sources */,
 				E325E3D522717578008FD6DF /* UIImage+CZ.swift in Sources */,
+				E351BF1F227818BC00D00963 /* SeatNewViewController.swift in Sources */,
 				E325E7EE22717751008FD6DF /* BaseViewController.swift in Sources */,
 				E325E25F22717555008FD6DF /* AppDelegate+Private.swift in Sources */,
 				E325E3F922717578008FD6DF /* TYAlertDropDownAnimation.m in Sources */,
@@ -1801,6 +1831,7 @@
 				E325E3B722717578008FD6DF /* ColorChange.swift in Sources */,
 				E325E3B522717578008FD6DF /* LRSwitchStudentView.swift in Sources */,
 				E325E40A22717578008FD6DF /* Logistics.xcdatamodeld in Sources */,
+				E351BF2622781AD300D00963 /* SeatView.swift in Sources */,
 				E325E3EE22717578008FD6DF /* SwiftyPhotoClipper.swift in Sources */,
 				E325E3B222717578008FD6DF /* UIView + Cornner.swift in Sources */,
 				E325E38822717578008FD6DF /* VersionModel.swift in Sources */,
@@ -1900,6 +1931,7 @@
 				E325E38922717578008FD6DF /* HSVersionManager.swift in Sources */,
 				E325E7F7227181D3008FD6DF /* HomeViewController.swift in Sources */,
 				E325E3AF22717578008FD6DF /* PopSelectListTableViewCell.swift in Sources */,
+				E351BF1C2277FEE200D00963 /* SaveSeatDataModel.swift in Sources */,
 				E325E68922717751008FD6DF /* ConfigDataModel.swift in Sources */,
 				E325E3BF22717578008FD6DF /* SelectChangQiDateView.swift in Sources */,
 				E325E3E422717578008FD6DF /* extension+NSLayoutConstraint.swift in Sources */,

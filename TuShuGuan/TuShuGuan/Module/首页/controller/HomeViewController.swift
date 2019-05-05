@@ -100,14 +100,15 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
             
         }
 //        pro.collectionIndexClick(index: indexPath.row)
-        pushViewController("SeatViewController")
+//        pushViewController("SeatViewController")
+        pushViewController("SeatNewViewController")
     }
 }
 extension HomeViewController{
     func getApps(){
        
         let parameter:NSMutableDictionary = [
-            :
+            "token":MyConfig.shared().token
             
         ]
         dataController.getApps(parameter: parameter) { [weak self](isSucceed, info) in

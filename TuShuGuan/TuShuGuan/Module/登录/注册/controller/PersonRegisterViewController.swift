@@ -10,6 +10,7 @@ import UIKit
 
 class PersonRegisterViewController: BaseViewController {
     
+    @IBOutlet weak var numerTextField: UITextField!
     @IBOutlet weak var idCardTextField: UITextField!
     var headImage:UIImage!
     @IBOutlet weak var headButton: UIButton!
@@ -182,6 +183,10 @@ extension PersonRegisterViewController{
             LHAlertView.showTipAlertWithTitle("个人照片不能为空")
             return false
         }
+        if String.isNilOrEmpty(numerTextField.text){
+            LHAlertView.showTipAlertWithTitle("学号不能为空")
+            return false
+        }
         return true
     }
     
@@ -217,7 +222,8 @@ extension PersonRegisterViewController{
             "valigatecode":codeTextField.text!,
             "base64Str":imageBase64String,
             "idcard":idCardTextField.text!,
-            "phone":phoneTextField.text!
+            "phone":phoneTextField.text!,
+            "":numerTextField.text!
             
             ]
         dataController.register(parameter: parameter) { [weak self](isSucceed, info) in
