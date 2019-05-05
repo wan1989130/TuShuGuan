@@ -80,11 +80,6 @@
                         <constraint firstItem="PQS-sm-pg5" firstAttribute="leading" secondItem="igK-mv-iz7" secondAttribute="trailing" id="wPt-Rb-swt"/>
                         <constraint firstItem="Xhi-t2-w0p" firstAttribute="width" secondItem="PQS-sm-pg5" secondAttribute="width" id="xsn-fr-E3S"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </view>
                 <view tag="1001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bax-ii-dQb">
                     <rect key="frame" x="100" y="150" width="60" height="120"/>
@@ -480,32 +475,32 @@
                 <view tag="1011" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkg-3l-gjo">
                     <rect key="frame" x="370" y="300" width="60" height="120"/>
                     <subviews>
-                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-88-d8M">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="76" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-88-d8M">
                             <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="2Mk-jE-78S"/>
                                 <constraint firstAttribute="width" constant="30" id="CWz-4D-XyC"/>
                             </constraints>
                         </imageView>
-                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-ZV-ctz">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="77" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="ne5-ZV-ctz">
                             <rect key="frame" x="30" y="0.0" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="76" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="6vQ-5O-QrW">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="78" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="6vQ-5O-QrW">
                             <rect key="frame" x="0.0" y="30" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="77" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-SN-x0c">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="79" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-SN-x0c">
                             <rect key="frame" x="30" y="30" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="78" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-HI-Mom">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="80" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="NRB-HI-Mom">
                             <rect key="frame" x="0.0" y="60" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="79" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="8f2-en-PPG">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="81" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="8f2-en-PPG">
                             <rect key="frame" x="30" y="60" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="80" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="pNd-1A-Alf">
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="pNd-1A-Alf">
                             <rect key="frame" x="0.0" y="90" width="30" height="30"/>
                         </imageView>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="81" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="tJL-Yw-oHM">
+                        <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seat_available" translatesAutoresizingMaskIntoConstraints="NO" id="tJL-Yw-oHM">
                             <rect key="frame" x="30" y="90" width="30" height="30"/>
                         </imageView>
                     </subviews>

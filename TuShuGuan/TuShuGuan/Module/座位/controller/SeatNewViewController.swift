@@ -14,7 +14,13 @@ class SeatNewViewController: BaseViewController {
         saveSelectSeat()
     }
     @IBAction func resetClick(_ sender: Any) {
-        seatView.resetView()
+        if dataController.model.data.selectedSeatId != "" && dataController.model.data.selectedStatus == "1"{
+            seatView.resetView()
+            saveSelectSeat()
+        }
+       
+        
+        
     }
     let User_UIID = UIDevice.current.identifierForVendor?.uuidString
     var dataController:SeatDataViewController!
@@ -72,7 +78,8 @@ extension SeatNewViewController{
     func getSeats(){
         
         let parameter:NSMutableDictionary = [
-            "deviceId":User_UIID
+            "token":MyConfig.shared().token
+//            "deviceId":"22"
             
         ]
         dataController.querySelectSite(parameter: parameter) { [weak self](isSucceed, info) in
@@ -90,14 +97,15 @@ extension SeatNewViewController{
         let parameter:NSMutableDictionary = [
             "seatId":dataController.model.data.selectedSeatId,
             "status":dataController.model.data.selectedStatus,
-            "deviceId":User_UIID
+            "token":MyConfig.shared().token
+//                        "deviceId":"22"
             
         ]
         dataController.saveSelectSeat(parameter: parameter) { [weak self](isSucceed, info) in
             if isSucceed {
                 self?.isRefresh()
             }else{
-                //                self?.getSeats()
+                self?.getSeats()
             }
         }
     }
@@ -109,6 +117,7 @@ extension SeatNewViewController{
                 LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
             }else if dataController.saveModel.data.checkVal == "1"{
                 LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
+                self.getSeats()
             }else if dataController.saveModel.data.checkVal == "2"{
                 LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
                 self.getSeats()

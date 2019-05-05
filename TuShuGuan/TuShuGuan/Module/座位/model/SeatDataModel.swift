@@ -36,20 +36,25 @@ class SeatModel:BaseModel{
         }else{
             selectedSeatId <- (map["selectedSeatId"],transfromOfCustomFunction())
         }
+        if selectedSeatId != ""{
+            selectedStatus = "1"
+        }else{
+            selectedStatus = "0"
+        }
         selectedName    <- map["selectedName"]
-        selectedStatus    <- map["selectedStatus"]
+//        selectedStatus    <- map["selectedStatus"]
         selectedRow    <- map["selectedRow"]
         selectedCol    <- map["selectedCol"]
         seats    <- map["seats"]
-        if selectedStatus == "0"{
-            status = .seatsStateAvailable
-        }else if selectedStatus == "1"{
-            status = .seatsStateUnavailable
-        }else if selectedStatus == "2"{
-            status = .seatsStateSellOut
-        }else if selectedStatus == "3"{
-            status = .seatsStateSelected
-        }
+//        if selectedStatus == "0"{
+//            status = .seatsStateAvailable
+//        }else if selectedStatus == "1"{
+//            status = .seatsStateUnavailable
+//        }else if selectedStatus == "2"{
+//            status = .seatsStateSellOut
+//        }else if selectedStatus == "3"{
+//            status = .seatsStateSelected
+//        }
     }
     
 }

@@ -35,6 +35,7 @@ class ApplyToolModel: BaseModel {
         super.mapping(map: map)
         text    <- map["menuname"]
         icon    <- map["icon"]
+        id <- map["menuid"]
     }
     
 }

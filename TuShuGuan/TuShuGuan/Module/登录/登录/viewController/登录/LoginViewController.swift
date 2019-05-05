@@ -76,8 +76,8 @@ class LoginViewController: BaseViewController {
                 MyConfig.shared().phone = (self?.userNameTextField.text!)!
                 
                 MyConfig.shared().userName = (self?.passwordTextField.text!)!
-//                weakSelf?.showMainTab()
-                weakSelf?.pushViewController("SeatNewViewController")
+                weakSelf?.showMainTab()
+                
             }else {
 
             }
@@ -86,11 +86,14 @@ class LoginViewController: BaseViewController {
     
     func checkFun() -> Bool{
 
-        
-        if String.isNilOrEmpty(userNameTextField.text){
-            LHAlertView.showTipAlertWithTitle("用户名不能为空")
+        if !(userNameTextField.text?.isLegalMobile())!{
             return false
         }
+        
+//        if String.isNilOrEmpty(userNameTextField.text){
+//            LHAlertView.showTipAlertWithTitle("手机号不能为空")
+//            return false
+//        }
         if String.isNilOrEmpty(passwordTextField.text){
             LHAlertView.showTipAlertWithTitle("密码不能为空")
             return false

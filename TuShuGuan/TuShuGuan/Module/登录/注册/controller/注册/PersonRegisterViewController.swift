@@ -7,9 +7,35 @@
 //
 
 import UIKit
-
+typealias SelectBlcok = (_ model:DictionaryItemModel) ->Void
 class PersonRegisterViewController: BaseViewController {
     
+    var classModel:DictionaryItemModel!
+    var professionModel:DictionaryItemModel!
+    @IBAction func professionClick(_ sender: UIButton) {
+        let block:SelectBlcok = {
+            [weak self](model) in
+            self?.professionModel = model
+            self?.professionTextField.text = model.name
+        }
+        let dic:NSMutableDictionary = [
+            "type":"1",
+            "block":block
+        ]
+        pushViewController("SelectClassAndProfessionViewController", sender: dic)
+    }
+    @IBAction func classClick(_ sender: UIButton) {
+        let block:SelectBlcok = {[weak self]
+            (model) in
+            self?.classModel = model
+            self?.classNameTextField.text = model.name
+        }
+        let dic:NSMutableDictionary = [
+            "type":"0",
+            "block":block
+        ]
+        pushViewController("SelectClassAndProfessionViewController", sender: dic)
+    }
     @IBOutlet weak var numerTextField: UITextField!
     @IBOutlet weak var idCardTextField: UITextField!
     var headImage:UIImage!
@@ -164,11 +190,11 @@ extension PersonRegisterViewController{
             LHAlertView.showTipAlertWithTitle("密码与验证码不一致")
             return false
         }
-        if String.isNilOrEmpty(classNameTextField.text){
+        if classModel == nil{
             LHAlertView.showTipAlertWithTitle("班级不能为空")
             return false
         }
-        if String.isNilOrEmpty(professionTextField.text){
+        if professionModel == nil{
             LHAlertView.showTipAlertWithTitle("专业不能为空")
             return false
         }
@@ -217,13 +243,13 @@ extension PersonRegisterViewController{
         let parameter:NSMutableDictionary = [
             "name":userNameTextField.text!,
             "password":passwordTextField.text!,
-            "college":classNameTextField.text!,
-            "major":professionTextField.text!,
+            "college":classModel.code,
+            "major":professionModel!.code,
             "valigatecode":codeTextField.text!,
             "base64Str":imageBase64String,
             "idcard":idCardTextField.text!,
             "phone":phoneTextField.text!,
-            "":numerTextField.text!
+            "stunumber":numerTextField.text!
             
             ]
         dataController.register(parameter: parameter) { [weak self](isSucceed, info) in

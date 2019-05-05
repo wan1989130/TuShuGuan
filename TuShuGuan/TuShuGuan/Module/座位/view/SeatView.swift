@@ -17,6 +17,11 @@ class SeatView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+       
+       
+      
+    }
+    func initView(){
         for i in 1..<98{
             let imageView:UIImageView = self.viewWithTag(i) as! UIImageView
             imageView.isUserInteractionEnabled = true
@@ -25,31 +30,31 @@ class SeatView: UIView {
             imageView.frame = CGRect(x: imageView.frame.minX, y: imageView.frame.minY, width: 30, height: 30)
             imageView.image = UIImage.init(named: "mr")
             imageView.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(click(tap:))))
-            print("\(i) == \(imageView.tag)")
+            
         }
         for i in 1000..<1015{
             let view:UIView = self.viewWithTag(i) as! UIView
             view.layer.borderColor = UIColor.black.withAlphaComponent(0.2).cgColor
             view.layer.borderWidth = 1
         }
-       
-      
     }
     func resetView(){
         if model.data.selectedSeatId != "" && model.data.selectedStatus == "1"{
             let imageView:UIImageView = self.viewWithTag(Int(model.data.selectedSeatId)!) as! UIImageView
             imageView.contentMode = .scaleAspectFit
             imageView.image = UIImage.init(named: "mr")
-            model.data.selectedStatus == "0"
+            model.data.selectedStatus = "0"
         }
         
     }
     func update(model:SeatDataModel){
+        initView()
         self.model = model
         if model.data.selectedSeatId != ""{
             selectedIndex = Int(model.data.selectedSeatId)!
             let imageView:UIImageView = self.viewWithTag(selectedIndex) as! UIImageView
             imageView.image = UIImage.init(named: "yx")
+            
         }
         if model.data.seats.count > 0{
             for item in model.data.seats{

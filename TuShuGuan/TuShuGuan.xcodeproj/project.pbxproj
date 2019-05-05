@@ -189,9 +189,6 @@
 		E325E7F22271810D008FD6DF /* districtOne.plist in Resources */ = {isa = PBXBuildFile; fileRef = E325E7F12271810D008FD6DF /* districtOne.plist */; };
 		E325E7F7227181D3008FD6DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E7F5227181D3008FD6DF /* HomeViewController.swift */; };
 		E325E7F8227181D3008FD6DF /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E7F6227181D3008FD6DF /* HomeViewController.xib */; };
-		E325E80122718253008FD6DF /* PersonRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E7FE22718253008FD6DF /* PersonRegisterViewController.swift */; };
-		E325E80222718253008FD6DF /* PersonRegisterDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E7FF22718253008FD6DF /* PersonRegisterDataController.swift */; };
-		E325E80322718253008FD6DF /* PersonRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80022718253008FD6DF /* PersonRegisterViewController.xib */; };
 		E325E8052271925E008FD6DF /* HomeDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E8042271925E008FD6DF /* HomeDataController.swift */; };
 		E325E80F22719439008FD6DF /* SeatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E325E80D22719439008FD6DF /* SeatViewController.swift */; };
 		E325E81022719439008FD6DF /* SeatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E325E80E22719439008FD6DF /* SeatViewController.xib */; };
@@ -204,6 +201,15 @@
 		E351BF22227819FE00D00963 /* 741556601237_.pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E351BF21227819FE00D00963 /* 741556601237_.pic.jpg */; };
 		E351BF2622781AD300D00963 /* SeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E351BF2522781AD300D00963 /* SeatView.swift */; };
 		E351BF2822781ADC00D00963 /* SeatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E351BF2722781ADC00D00963 /* SeatView.xib */; };
+		E380FF2D227F26AA005B646A /* PersonRegisterDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380FF2A227F26A9005B646A /* PersonRegisterDataController.swift */; };
+		E380FF2E227F26AA005B646A /* PersonRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E380FF2B227F26A9005B646A /* PersonRegisterViewController.xib */; };
+		E380FF2F227F26AA005B646A /* PersonRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380FF2C227F26A9005B646A /* PersonRegisterViewController.swift */; };
+		E380FF32227F26D9005B646A /* SelectClassAndProfessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380FF30227F26D9005B646A /* SelectClassAndProfessionViewController.swift */; };
+		E380FF33227F26D9005B646A /* SelectClassAndProfessionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E380FF31227F26D9005B646A /* SelectClassAndProfessionViewController.xib */; };
+		E380FF39227F2733005B646A /* SelectTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E380FF37227F2733005B646A /* SelectTableViewCell.xib */; };
+		E380FF3A227F2733005B646A /* SelectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380FF38227F2733005B646A /* SelectTableViewCell.swift */; };
+		E380FF3D227F279B005B646A /* DictionaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380FF3C227F279B005B646A /* DictionaryDataModel.swift */; };
+		E380FF3F227F2812005B646A /* SelectClassAndProfessionDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380FF3E227F2812005B646A /* SelectClassAndProfessionDataController.swift */; };
 		E38F70182273F1820006DE4C /* MSDataProvider+Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */; };
 		E38F701C2273F5FE0006DE4C /* ApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38F701B2273F5FE0006DE4C /* ApplyModel.swift */; };
 		E3BFE1652271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */; };
@@ -483,9 +489,6 @@
 		E325E7F12271810D008FD6DF /* districtOne.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = districtOne.plist; sourceTree = "<group>"; };
 		E325E7F5227181D3008FD6DF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E325E7F6227181D3008FD6DF /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		E325E7FE22718253008FD6DF /* PersonRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRegisterViewController.swift; sourceTree = "<group>"; };
-		E325E7FF22718253008FD6DF /* PersonRegisterDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRegisterDataController.swift; sourceTree = "<group>"; };
-		E325E80022718253008FD6DF /* PersonRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonRegisterViewController.xib; sourceTree = "<group>"; };
 		E325E8042271925E008FD6DF /* HomeDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataController.swift; sourceTree = "<group>"; };
 		E325E80D22719439008FD6DF /* SeatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatViewController.swift; sourceTree = "<group>"; };
 		E325E80E22719439008FD6DF /* SeatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatViewController.xib; sourceTree = "<group>"; };
@@ -498,6 +501,15 @@
 		E351BF21227819FE00D00963 /* 741556601237_.pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 741556601237_.pic.jpg; sourceTree = "<group>"; };
 		E351BF2522781AD300D00963 /* SeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatView.swift; sourceTree = "<group>"; };
 		E351BF2722781ADC00D00963 /* SeatView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatView.xib; sourceTree = "<group>"; };
+		E380FF2A227F26A9005B646A /* PersonRegisterDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRegisterDataController.swift; sourceTree = "<group>"; };
+		E380FF2B227F26A9005B646A /* PersonRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonRegisterViewController.xib; sourceTree = "<group>"; };
+		E380FF2C227F26A9005B646A /* PersonRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonRegisterViewController.swift; sourceTree = "<group>"; };
+		E380FF30227F26D9005B646A /* SelectClassAndProfessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassAndProfessionViewController.swift; sourceTree = "<group>"; };
+		E380FF31227F26D9005B646A /* SelectClassAndProfessionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectClassAndProfessionViewController.xib; sourceTree = "<group>"; };
+		E380FF37227F2733005B646A /* SelectTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectTableViewCell.xib; sourceTree = "<group>"; };
+		E380FF38227F2733005B646A /* SelectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTableViewCell.swift; sourceTree = "<group>"; };
+		E380FF3C227F279B005B646A /* DictionaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDataModel.swift; sourceTree = "<group>"; };
+		E380FF3E227F2812005B646A /* SelectClassAndProfessionDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectClassAndProfessionDataController.swift; sourceTree = "<group>"; };
 		E38F70172273F1820006DE4C /* MSDataProvider+Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MSDataProvider+Home.swift"; sourceTree = "<group>"; };
 		E38F701B2273F5FE0006DE4C /* ApplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyModel.swift; sourceTree = "<group>"; };
 		E3BFE1632271EC7300E75B3A /* ApplyViewControllerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplyViewControllerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -1344,6 +1356,8 @@
 		E325E4212271774F008FD6DF /* 注册 */ = {
 			isa = PBXGroup;
 			children = (
+				E380FF3B227F278E005B646A /* model */,
+				E380FF36227F2733005B646A /* cell */,
 				E325E7F922718201008FD6DF /* controller */,
 			);
 			path = "注册";
@@ -1474,9 +1488,8 @@
 		E325E7F922718201008FD6DF /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				E325E7FF22718253008FD6DF /* PersonRegisterDataController.swift */,
-				E325E7FE22718253008FD6DF /* PersonRegisterViewController.swift */,
-				E325E80022718253008FD6DF /* PersonRegisterViewController.xib */,
+				E380FF28227F26A9005B646A /* 选择专业和班级 */,
+				E380FF29227F26A9005B646A /* 注册 */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -1529,6 +1542,43 @@
 				E351BF2722781ADC00D00963 /* SeatView.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		E380FF28227F26A9005B646A /* 选择专业和班级 */ = {
+			isa = PBXGroup;
+			children = (
+				E380FF3E227F2812005B646A /* SelectClassAndProfessionDataController.swift */,
+				E380FF30227F26D9005B646A /* SelectClassAndProfessionViewController.swift */,
+				E380FF31227F26D9005B646A /* SelectClassAndProfessionViewController.xib */,
+			);
+			path = "选择专业和班级";
+			sourceTree = "<group>";
+		};
+		E380FF29227F26A9005B646A /* 注册 */ = {
+			isa = PBXGroup;
+			children = (
+				E380FF2A227F26A9005B646A /* PersonRegisterDataController.swift */,
+				E380FF2C227F26A9005B646A /* PersonRegisterViewController.swift */,
+				E380FF2B227F26A9005B646A /* PersonRegisterViewController.xib */,
+			);
+			path = "注册";
+			sourceTree = "<group>";
+		};
+		E380FF36227F2733005B646A /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E380FF38227F2733005B646A /* SelectTableViewCell.swift */,
+				E380FF37227F2733005B646A /* SelectTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		E380FF3B227F278E005B646A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				E380FF3C227F279B005B646A /* DictionaryDataModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		E38F701A2273F5CF0006DE4C /* model */ = {
@@ -1671,8 +1721,10 @@
 				E325E3AB22717578008FD6DF /* LICENSE in Resources */,
 				E325E3B022717578008FD6DF /* PoPSelectListView.xib in Resources */,
 				E325E3D922717578008FD6DF /* QrCodeView.xib in Resources */,
+				E380FF39227F2733005B646A /* SelectTableViewCell.xib in Resources */,
 				E325E3FE22717578008FD6DF /* HSPopupSelectDayView示例代码.rtf in Resources */,
 				E325E3F022717578008FD6DF /* 示例代码XHLTagLabelsViewController.rtf in Resources */,
+				E380FF2E227F26AA005B646A /* PersonRegisterViewController.xib in Resources */,
 				E325E3C122717578008FD6DF /* PopupSelectDayView.xib in Resources */,
 				E325E3DA22717578008FD6DF /* CodeSuccessView.xib in Resources */,
 				E325E3A022717578008FD6DF /* aip.license in Resources */,
@@ -1680,13 +1732,13 @@
 				E325E3AE22717578008FD6DF /* PopSelectListTableViewCell.xib in Resources */,
 				E325E3D022717578008FD6DF /* MSCommentEditView.xib in Resources */,
 				E325E3B422717578008FD6DF /* SKPhotoBrowser.bundle in Resources */,
+				E380FF33227F26D9005B646A /* SelectClassAndProfessionViewController.xib in Resources */,
 				E325E3AC22717578008FD6DF /* README.md in Resources */,
 				E351BF22227819FE00D00963 /* 741556601237_.pic.jpg in Resources */,
 				E351BF20227818BC00D00963 /* SeatNewViewController.xib in Resources */,
 				E325E3C422717578008FD6DF /* HSRightBarButtonItemMenu示例代码.rtf in Resources */,
 				E325E69022717751008FD6DF /* LoginViewController.xib in Resources */,
 				E325E23322717256008FD6DF /* Main.storyboard in Resources */,
-				E325E80322718253008FD6DF /* PersonRegisterViewController.xib in Resources */,
 				E325E3FF22717578008FD6DF /* HSPopupSelectDayView.xib in Resources */,
 				E325E3E922717578008FD6DF /* WSDatePickerView.xib in Resources */,
 				E325E68D22717751008FD6DF /* SelectAreaPopupViewTableViewCell.xib in Resources */,
@@ -1805,10 +1857,12 @@
 				E325E40822717578008FD6DF /* FileOperator.swift in Sources */,
 				E325E41022717578008FD6DF /* SBJsonStreamParserState.m in Sources */,
 				E325E23022717256008FD6DF /* ViewController.swift in Sources */,
+				E380FF3D227F279B005B646A /* DictionaryDataModel.swift in Sources */,
 				E325E3E522717578008FD6DF /* NoDataView.swift in Sources */,
 				E38F70182273F1820006DE4C /* MSDataProvider+Home.swift in Sources */,
 				E325E39622717578008FD6DF /* NSDictionary+LH.m in Sources */,
 				E325E39022717578008FD6DF /* UIView+LH.swift in Sources */,
+				E380FF32227F26D9005B646A /* SelectClassAndProfessionViewController.swift in Sources */,
 				E38F701C2273F5FE0006DE4C /* ApplyModel.swift in Sources */,
 				E325E38522717578008FD6DF /* Config.swift in Sources */,
 				E325E7E822717751008FD6DF /* BaseOnlyClassDataModel.swift in Sources */,
@@ -1838,6 +1892,7 @@
 				E325E69122717751008FD6DF /* LoginViewController.swift in Sources */,
 				E325E41722717578008FD6DF /* POAPinyin.m in Sources */,
 				E325E40F22717578008FD6DF /* SBJsonUTF8Stream.m in Sources */,
+				E380FF3A227F2733005B646A /* SelectTableViewCell.swift in Sources */,
 				E325E3BC22717578008FD6DF /* RBCustomDatePickerView.m in Sources */,
 				E325E3A422717578008FD6DF /* BRStringPickerView.m in Sources */,
 				E325E3D222717578008FD6DF /* String+CZ.swift in Sources */,
@@ -1868,6 +1923,7 @@
 				E325E38622717578008FD6DF /* MyConfig.swift in Sources */,
 				E325E22E22717256008FD6DF /* AppDelegate.swift in Sources */,
 				E325E3D122717578008FD6DF /* MSCommentEditView.swift in Sources */,
+				E380FF2D227F26AA005B646A /* PersonRegisterDataController.swift in Sources */,
 				E325E3BE22717578008FD6DF /* UIImage + Compressor.swift in Sources */,
 				E325E40B22717578008FD6DF /* NSObject+SBJson.m in Sources */,
 				E325E40722717578008FD6DF /* LHHTTPClient.swift in Sources */,
@@ -1885,7 +1941,6 @@
 				E325E38E22717578008FD6DF /* ViewController+LH.swift in Sources */,
 				E325E3B822717578008FD6DF /* JZLocationConverter.m in Sources */,
 				E325E7ED22717751008FD6DF /* BaseStudentInfoModel.swift in Sources */,
-				E325E80222718253008FD6DF /* PersonRegisterDataController.swift in Sources */,
 				E325E7EF22717751008FD6DF /* BaseNavigationViewController.swift in Sources */,
 				E325E40222717578008FD6DF /* button+extension.swift in Sources */,
 				E325E3BB22717578008FD6DF /* MXSCycleScrollView.m in Sources */,
@@ -1910,6 +1965,7 @@
 				E325E80F22719439008FD6DF /* SeatViewController.swift in Sources */,
 				E325E39722717578008FD6DF /* UIImage+LH.m in Sources */,
 				E325E3EC22717578008FD6DF /* UIView+Extension.m in Sources */,
+				E380FF2F227F26AA005B646A /* PersonRegisterViewController.swift in Sources */,
 				E325E3CD22717578008FD6DF /* DropListCoverView.swift in Sources */,
 				E325E3B122717578008FD6DF /* TCCountDown.swift in Sources */,
 				E325E7EC22717751008FD6DF /* BaseAreaListDataModel.swift in Sources */,
@@ -1936,9 +1992,9 @@
 				E325E3BF22717578008FD6DF /* SelectChangQiDateView.swift in Sources */,
 				E325E3E422717578008FD6DF /* extension+NSLayoutConstraint.swift in Sources */,
 				E325E68722717751008FD6DF /* StudentModel.swift in Sources */,
+				E380FF3F227F2812005B646A /* SelectClassAndProfessionDataController.swift in Sources */,
 				E351BF182277495900D00963 /* MSDataProvider+Seat.swift in Sources */,
 				E325E38F22717578008FD6DF /* String+LH.swift in Sources */,
-				E325E80122718253008FD6DF /* PersonRegisterViewController.swift in Sources */,
 				E325E39E22717578008FD6DF /* NSData+LH.m in Sources */,
 				E325E39C22717578008FD6DF /* NSString+LH.m in Sources */,
 				E325E7EA22717751008FD6DF /* BaseClassesModel.swift in Sources */,

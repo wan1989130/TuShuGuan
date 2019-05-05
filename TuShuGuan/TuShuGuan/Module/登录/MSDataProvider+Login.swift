@@ -31,6 +31,17 @@ extension MSDataProvider{
         LHHttpDataProvider.postDataForDelegate(delegate,clientIdentifier: ToolKitServerClientIdentifier, path: "forgetPassword.do", withParams: parameter, verson: nil, completionBlock: completionBlock)
         
     }
+    //班级
+    class func queryDictClass(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
+        
+        LHHttpDataProvider.getDataForDelegate(delegate, path: "queryDictClass", withParams: parameter, verson: nil, completionBlock: completionBlock)
+    }
+    
+    //专业
+    class func queryDictMajor(delegate:UIViewController, parameter:NSMutableDictionary, completionBlock:@escaping LHHTTPResultJsonHandler){
+        
+        LHHttpDataProvider.getDataForDelegate(delegate, path: "queryDictMajor", withParams: parameter, verson: nil, completionBlock: completionBlock)
+    }
    
     
 

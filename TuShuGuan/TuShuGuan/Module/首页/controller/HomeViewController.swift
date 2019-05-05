@@ -96,12 +96,12 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if dataController.toolArray[indexPath.row].id == "1"{
-            
+        if dataController.toolArray[indexPath.row].id == "1501"{
+            pushViewController("SeatNewViewController")
         }
 //        pro.collectionIndexClick(index: indexPath.row)
 //        pushViewController("SeatViewController")
-        pushViewController("SeatNewViewController")
+        
     }
 }
 extension HomeViewController{
