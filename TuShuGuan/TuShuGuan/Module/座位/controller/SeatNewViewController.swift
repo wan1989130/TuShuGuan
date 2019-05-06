@@ -118,6 +118,7 @@ extension SeatNewViewController{
             
             if dataController.saveModel.data.checkVal == "0"{
                 LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
+                self.getSeats()
             }else if dataController.saveModel.data.checkVal == "1"{
                 LHAlertView.showTipAlertWithTitle(dataController.saveModel.msg!)
                 self.getSeats()
