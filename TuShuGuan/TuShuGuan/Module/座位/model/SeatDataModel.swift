@@ -22,6 +22,7 @@ class SeatModel:BaseModel{
     var selectedSeatId = ""
     var selectedName = ""
     var selectedStatus = ""
+    var oldSelectedId = ""
     var selectedRow = ""
     var selectedCol = ""
     var seats = [SeatItemModel]()
@@ -36,6 +37,8 @@ class SeatModel:BaseModel{
         }else{
             selectedSeatId <- (map["selectedSeatId"],transfromOfCustomFunction())
         }
+        
+        oldSelectedId <- map["selectedSeatId"]
         if selectedSeatId != ""{
             selectedStatus = "1"
         }else{

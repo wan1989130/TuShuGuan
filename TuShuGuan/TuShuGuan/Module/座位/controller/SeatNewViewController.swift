@@ -11,12 +11,15 @@ import UIKit
 class SeatNewViewController: BaseViewController {
 
     @IBAction func confirmClick(_ sender: Any) {
-        saveSelectSeat()
+        saveSelectSeat(seatId: nil)
     }
     @IBAction func resetClick(_ sender: Any) {
         if dataController.model.data.selectedSeatId != "" && dataController.model.data.selectedStatus == "1"{
             seatView.resetView()
-            saveSelectSeat()
+            if dataController.model.data.oldSelectedId != ""{
+                saveSelectSeat(seatId: dataController.model.data.oldSelectedId)
+            }
+            
         }
        
         
@@ -89,14 +92,14 @@ extension SeatNewViewController{
         }
     }
     
-    func saveSelectSeat(){
+    func saveSelectSeat(seatId:String?){
         if dataController.model.data.selectedSeatId == ""{
             LHAlertView.showTipAlertWithTitle("请选择座位")
             return
         }
         let parameter:NSMutableDictionary = [
-            "seatId":dataController.model.data.selectedSeatId,
-            "status":dataController.model.data.selectedStatus,
+            "seatId":seatId == nil ? dataController.model.data.selectedSeatId : seatId,
+            "status":seatId == nil ? dataController.model.data.selectedStatus : "0",
             "token":MyConfig.shared().token
 //                        "deviceId":"22"
             
